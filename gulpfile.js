@@ -1,5 +1,10 @@
+
 var gulp = require("gulp"),
-    watch = require("gulp-watch");
+    watch = require("gulp-watch"),
+    postcss = require("gulp-postcss"),
+    autoprefixer = require("autoprefixer"),
+    cssvars = require("postcss-simple-vars"),
+    nested = require("postcss-nested");
 
 
 
@@ -14,7 +19,12 @@ gulp.task("html", function () {
 
 
 gulp.task("styles", function () {
-    console.log("Imagine SASS or PostCSS takes running here");
+    // this line  moves the code from the styles.css file
+    // through a PostCSS filter (which expects an array of arguments), but we only supply one - autoprefixer
+    // to a new file in temp/styles
+    return gulp.src("./app/assets/styles/styles.css")
+        .pipe(postcss([cssvars, nested, autoprefixer]))
+        .pipe(gulp.dest("./app/temp/styles"));
 });
 
 
