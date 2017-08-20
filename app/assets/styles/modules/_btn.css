@@ -1,0 +1,26 @@
+/* CSS for the buttons */
+
+/* Default button */
+.btn {
+    background-color: $mainBlue;
+    color: #FFF;
+    /* Remove underline */
+    text-decoration: none;
+    /* make button larger */
+    padding: .75rem 1.2rem;
+    /* make parent and surrounding elements aware of it's vertical padding */
+    display: inline-block;
+
+
+    /* buttons with an orange background */
+    &--orange {
+        background-color: $mainOrange;
+    }
+
+
+    /* large buttons */
+    &--large {
+        font-size: 1.25rem;
+        padding: 1.1rem 1.9rem;
+    }
+}
