@@ -1,0 +1,40 @@
+/* CSS for the hero container at top of page */
+
+.large-hero {
+    position: relative;
+
+    
+    /* position the text on top of the image */
+    &__text-content {
+        position: absolute;
+        /* position image on left side of screen */
+        left: 0;
+        /* then have the div extend all the way across the screen */
+        width: 100%;
+        /* then move text to horizontal center */
+        text-align: center;
+        /* center top edge of the div vertically with the container it's inside */
+        top: 50%;
+        /* pull text in the div up by half it's height to center it vertically */
+        transform: translateY(-50%); /* this function positions vertically relative to iteslf */
+    }
+
+
+    &__title {
+        font-weight: 300;
+        color: #2f5572;
+        font-size: 4.8rem;
+    }
+    
+    
+    &__subtitle {
+        font-weight: 300;
+        color: #2f5572;
+        font-size: 2.9rem;
+    }
+}
+
+
+
+
+

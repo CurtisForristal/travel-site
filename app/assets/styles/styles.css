@@ -1,17 +1,9 @@
-/* VARIABLES */
-$mainBlue: #2f5572;
+ /* IMPORTS */
 
+/* Normalize package */
+@import "normalize.css";
 
-body {
-    color: $mainBlue;
-    padding: 25px;
-    margin: 10px;
-    columns: 300px 2;
-}
+/* My Stylesheets */
+@import "base/_global";
+@import "modules/_large-hero";
 
-.box {
-    a {
-        display: block;
-        padding: 10px;
-    }
-}
