@@ -1,0 +1,11 @@
+/* Block formatting */
+
+.wrapper {
+    padding-left: 18px;
+    padding-right: 18px;
+    /* prevent content from getting too wide on large screens */
+    max-width: 1200px;
+    /* keep content centered horizontally */
+    margin-left: auto;
+    margin-right: auto;
+}
