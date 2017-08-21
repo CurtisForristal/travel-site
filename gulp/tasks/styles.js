@@ -6,7 +6,8 @@ var gulp = require("gulp"),
     autoprefixer = require("autoprefixer"),
     cssvars = require("postcss-simple-vars"),
     nested = require("postcss-nested"),
-    cssImport = require("postcss-import");
+    cssImport = require("postcss-import"),
+    mixins = require("postcss-mixins");
 
 
 gulp.task("styles", function () {
@@ -14,7 +15,7 @@ gulp.task("styles", function () {
     // through a PostCSS filter (which expects an array of arguments), but we only supply one - autoprefixer
     // to a new file in temp/styles
     return gulp.src("./app/assets/styles/styles.css")
-        .pipe(postcss([cssImport, cssvars, nested, autoprefixer]))
+        .pipe(postcss([cssImport, mixins, cssvars, nested, autoprefixer]))
         .on("error", function(errorInfo) {
             console.log(errorInfo.toString());
             this.emit("end");

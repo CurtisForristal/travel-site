@@ -1,0 +1,24 @@
+
+
+@define-mixin atSmall {
+    /* If the screen is larger that 530px (530px is somewhat arbitrary) */
+    @media (min-width: 530px) {
+        @mixin-content;
+    }
+}
+
+
+@define-mixin atMedium {
+    /* If the screen is larger that 800px */
+    @media (min-width: 800px) {
+        @mixin-content;
+    }
+}
+
+
+@define-mixin atLarge {
+    /* If the screen is larger that 1200px */
+    @media (min-width: 1200px) {
+        @mixin-content;
+    }
+}

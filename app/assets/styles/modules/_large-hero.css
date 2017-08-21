@@ -1,4 +1,5 @@
 /* CSS for the hero container at top of page */
+/* Baseline styles are mobile-first */
 
 .large-hero {
     position: relative;
@@ -23,17 +24,33 @@
     &__title {
         font-weight: 300;
         color: $mainBlue;
-        font-size: 4.8rem;
         margin: 0;
+        font-size: 1.1rem;
+
+        @mixin atSmall {
+            font-size: 2.0rem;
+        }
+
+        @mixin atMedium {
+            font-size: 3.2rem;
+        }
+
+        @mixin atLarge {
+            font-size: 4.8rem;
+        }
     }
     
     
     &__subtitle {
         font-weight: 300;
         color: $mainBlue;
-        font-size: 2.9rem;
+        font-size: 1.1rem;
         margin: 0;
-        
+
+        /* For screen larger than 530px */
+        @mixin atSmall {
+            font-size: 2.9rem;
+        }
     }
 
 

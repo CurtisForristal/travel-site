@@ -472,6 +472,8 @@ img {
 
 /* CSS for the hero container at top of page */
 
+/* Baseline styles are mobile-first */
+
 .large-hero {
     position: relative;
 }
@@ -496,16 +498,53 @@ img {
 .large-hero__title {
         font-weight: 300;
         color: #2f5572;
-        font-size: 4.8rem;
         margin: 0;
+        font-size: 1.1rem;
+    }
+
+/* If the screen is larger that 530px (530px is somewhat arbitrary) */
+
+@media (min-width: 530px) {
+
+.large-hero__title {
+            font-size: 2.0rem
+    }
+    }
+
+/* If the screen is larger that 800px */
+
+@media (min-width: 800px) {
+
+.large-hero__title {
+            font-size: 3.2rem
+    }
+    }
+
+/* If the screen is larger that 1200px */
+
+@media (min-width: 1200px) {
+
+.large-hero__title {
+            font-size: 4.8rem
+    }
     }
 
 .large-hero__subtitle {
         font-weight: 300;
         color: #2f5572;
-        font-size: 2.9rem;
+        font-size: 1.1rem;
         margin: 0;
-        
+
+        /* For screen larger than 530px */
+    }
+
+/* If the screen is larger that 530px (530px is somewhat arbitrary) */
+
+@media (min-width: 530px) {
+
+.large-hero__subtitle {
+            font-size: 2.9rem
+    }
     }
 
 .large-hero__description {
