@@ -8,6 +8,10 @@
     /* keep content centered horizontally */
     margin-left: auto;
     margin-right: auto;
+    /* This works with the "margin-right: -65px;" proptery that is added to the row--gutters class */
+    /* To remove the extra padding on the right side of the last column */
+    /* This hides that margin area that hangs off the edge of the div */
+    overflow: hidden;
 
 
     &--medium {

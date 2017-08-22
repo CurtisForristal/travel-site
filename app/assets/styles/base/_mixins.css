@@ -22,3 +22,15 @@
         @mixin-content;
     }
 }
+
+
+@define-mixin clearfix {
+    /* When floating divs in an empty row parent element */
+    /* You have to "clear" the floats or else the parent row div doesn't know how tall it should be */
+    /* This will create some blank space after all of the content in the row div */
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}

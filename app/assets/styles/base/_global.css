@@ -10,3 +10,8 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+* {
+    /* This changes the way the browser calculates the width of the screen */
+    box-sizing: border-box;
+}

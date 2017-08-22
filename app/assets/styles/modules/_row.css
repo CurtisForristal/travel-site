@@ -1,0 +1,34 @@
+
+
+.row {
+
+    /* Have to "clear" the floats or else the parent row div doesn't know how tall it should be */
+    /* This will create some blank space after all of the content in the row div */
+    @mixin clearfix;
+
+
+    @mixin atMedium {
+        &__medium-4 {
+            float: left;
+            width: 33.33%
+        }
+
+        &__medium-8 {
+            float: left;
+            width: 66.66%;
+        }
+    }
+
+
+    /* This will only select the children div elements */
+    /* and give them some side padding */
+    &--gutters > div {
+        padding-right: 65px;
+    }
+
+    /* This works with the "overflow: hidden" proptery that is added to the wrapper class */
+    /* To remove the extra padding on the right side of the last column */
+    &--gutters {
+        margin-right: -65px;
+    }
+}

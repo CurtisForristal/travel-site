@@ -468,6 +468,12 @@ img {
     height: auto;
 }
 
+* {
+    /* This changes the way the browser calculates the width of the screen */
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
 /* All CSS Variables */
 
 /* CSS for the hero container at top of page */
@@ -601,6 +607,10 @@ img {
     /* keep content centered horizontally */
     margin-left: auto;
     margin-right: auto;
+    /* This works with the "margin-right: -65px;" proptery that is added to the row--gutters class */
+    /* To remove the extra padding on the right side of the last column */
+    /* This hides that margin area that hangs off the edge of the div */
+    overflow: hidden;
 }
 
 .wrapper--medium {
@@ -686,4 +696,51 @@ img {
 
 .headline--b-margin-large {
         margin-bottom: 1.6em;
+    }
+
+.row {
+
+    /* Have to "clear" the floats or else the parent row div doesn't know how tall it should be */
+    /* This will create some blank space after all of the content in the row div */
+    /* When floating divs in an empty row parent element */
+    /* You have to "clear" the floats or else the parent row div doesn't know how tall it should be */
+
+
+    /* This will only select the children div elements */
+
+    /* This works with the "overflow: hidden" proptery that is added to the wrapper class */
+}
+
+/* This will create some blank space after all of the content in the row div */
+
+.row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+/* If the screen is larger that 800px */
+
+@media (min-width: 800px) {
+        .row__medium-4 {
+            float: left;
+            width: 33.33%
+        }
+
+        .row__medium-8 {
+            float: left;
+            width: 66.66%;
+        }
+    }
+
+/* and give them some side padding */
+
+.row--gutters > div {
+        padding-right: 65px;
+    }
+
+/* To remove the extra padding on the right side of the last column */
+
+.row--gutters {
+        margin-right: -65px;
     }
