@@ -8,4 +8,15 @@
     /* keep content centered horizontally */
     margin-left: auto;
     margin-right: auto;
+
+
+    &--medium {
+        max-width: 976px;
+    }
+
+    /* Any wrapper that is nested inside another wrapper don't get the double padding applied */
+    .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
