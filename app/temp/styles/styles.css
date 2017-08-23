@@ -456,6 +456,8 @@ template {
 
 /* My Stylesheets */
 
+/* All CSS Variables */
+
 /* GLOBAL STYLES */
 
 body {
@@ -474,7 +476,9 @@ img {
             box-sizing: border-box;
 }
 
-/* All CSS Variables */
+a {
+    color: #d59541;
+}
 
 /* CSS for the hero container at top of page */
 
@@ -711,12 +715,15 @@ img {
         margin-bottom: 1.6em;
     }
 
+.headline--no-t-margin {
+        margin-top: 0;
+    }
+
 .row {
 
     /* Have to "clear" the floats or else the parent row div doesn't know how tall it should be */
     /* This will create some blank space after all of the content in the row div */
     /* When floating divs in an empty row parent element */
-    /* You have to "clear" the floats or else the parent row div doesn't know how tall it should be */
 
 
     /* This will only select the children div elements */
@@ -732,9 +739,21 @@ img {
         display: table;
     }
 
+/* You have to "clear" the floats or else the parent row div doesn't know how tall it should be */
+
+.row__b-margin-until-medium {
+        margin-bottom: 1.0rem;
+    }
+
 /* If the screen is larger that 800px */
 
 @media (min-width: 800px) {
+        
+        .row__b-margin-until-medium {
+            margin-bottom: 0;
+        }
+        
+        
         .row__medium-4 {
             float: left;
             width: 33.33%
@@ -767,4 +786,22 @@ img {
 
 .row--gutters {
         margin-right: -65px;
+    }
+
+.generic-content-container p {
+        line-height: 1.65;
+        margin: 1.8rem 0;
+    }
+
+/* If the screen is larger that 530px (530px is somewhat arbitrary) */
+
+@media (min-width: 530px) {
+
+.generic-content-container p {
+            font-size: 1.125rem
+    }
+    }
+
+.generic-content-container p a {
+        font-weight: 700;
     }
