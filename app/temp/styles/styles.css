@@ -644,7 +644,7 @@ a {
 /* Add top and botom padding (empty space) to go between page sections */
 
 .page-section {
-    padding: 1.2rem;
+    padding: 1.2rem 0;
 }
 
 /* If the screen is larger that 800px */
@@ -724,11 +724,6 @@ a {
     /* Have to "clear" the floats or else the parent row div doesn't know how tall it should be */
     /* This will create some blank space after all of the content in the row div */
     /* When floating divs in an empty row parent element */
-
-
-    /* This will only select the children div elements */
-
-    /* This works with the "overflow: hidden" proptery that is added to the wrapper class */
 }
 
 /* This will create some blank space after all of the content in the row div */
@@ -743,6 +738,30 @@ a {
 
 .row__b-margin-until-medium {
         margin-bottom: 1.0rem;
+    }
+
+/* and give them some side padding */
+
+.row--gutters > div {
+        padding-right: 65px;
+    }
+
+/* This will only select the children div elements */
+
+.row--gutters-large > div {
+        padding-right: 100px;
+    }
+
+/* To remove the extra padding on the right side of the last column */
+
+.row--gutters {
+        margin-right: -65px;
+    }
+
+/* This works with the "overflow: hidden" proptery that is added to the wrapper class */
+
+.row--gutters-large {
+        margin-right: -100px;
     }
 
 /* If the screen is larger that 800px */
@@ -765,6 +784,12 @@ a {
         }
 
 
+        .row__medium-6 {
+            float: left;
+            width: 50%;
+        }
+
+
         .row__medium-8 {
             float: left;
             width: 66.66%;
@@ -776,21 +801,10 @@ a {
         }
     }
 
-/* and give them some side padding */
-
-.row--gutters > div {
-        padding-right: 65px;
-    }
-
-/* To remove the extra padding on the right side of the last column */
-
-.row--gutters {
-        margin-right: -65px;
-    }
-
 .generic-content-container p {
         line-height: 1.65;
-        margin: 1.8rem 0;
+        margin: 0 0 1.8rem 0;
+        font-weight: 300;
     }
 
 /* If the screen is larger that 530px (530px is somewhat arbitrary) */
@@ -804,4 +818,92 @@ a {
 
 .generic-content-container p a {
         font-weight: 700;
+    }
+
+.section-title {
+    font-size: 2.55rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* If the screen is larger that 530px (530px is somewhat arbitrary) */
+
+@media (min-width: 530px) {
+
+.section-title {
+        font-size: 3.75rem
+}
+    }
+
+.section-title strong {
+        font-weight: 500;
+    }
+
+.section-title__icon {
+        /* puts icon on its own line, and "Our Features" on a new line after */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0.6rem;
+    }
+
+/* If the screen is larger that 530px (530px is somewhat arbitrary) */
+
+@media (min-width: 530px) {
+
+.section-title__icon {
+            /* put icon and "Our Features" on the same line */
+            display: inline-block;
+            margin-right: 0.5rem;
+            margin-left: 0;
+            margin-bottom: 0
+    }
+    }
+
+.feature-item {
+    position: relative;
+    padding-bottom: 2.5rem;
+}
+
+/* If the screen is larger that 530px (530px is somewhat arbitrary) */
+
+@media (min-width: 530px) {
+
+.feature-item {
+        padding-left: 94px
+}
+    }
+
+.feature-item__icon {
+        display: block;
+        margin: 0 auto;
+    }
+
+/* If the screen is larger that 530px (530px is somewhat arbitrary) */
+
+@media (min-width: 530px) {
+
+.feature-item__icon {
+            position: absolute;
+            left: 0
+    }
+    }
+
+.feature-item__title {
+        font-size: 1.6rem;
+        font-weight: 300;
+        margin-bottom: 0.8rem;
+        margin-top: 0.7em;
+        text-align: center;
+    }
+
+/* If the screen is larger that 530px (530px is somewhat arbitrary) */
+
+@media (min-width: 530px) {
+
+.feature-item__title {
+            text-align: left;
+            font-size: 1.875rem;
+            margin-top: 1.0em
+    }
     }

@@ -12,6 +12,30 @@
     }
 
 
+        /* This will only select the children div elements */
+    /* and give them some side padding */
+    &--gutters > div {
+        padding-right: 65px;
+    }
+
+
+    &--gutters-large > div {
+        padding-right: 100px;
+    }
+
+    /* This works with the "overflow: hidden" proptery that is added to the wrapper class */
+    /* To remove the extra padding on the right side of the last column */
+    &--gutters {
+        margin-right: -65px;
+    }
+
+
+    &--gutters-large {
+        margin-right: -100px;
+    }
+
+
+
     @mixin atMedium {
         
         &__b-margin-until-medium {
@@ -30,6 +54,12 @@
         }
 
 
+        &__medium-6 {
+            float: left;
+            width: 50%;
+        }
+
+
         &__medium-8 {
             float: left;
             width: 66.66%;
@@ -39,18 +69,5 @@
         &__medium-8--smaller {
             width: 63%;
         }
-    }
-
-
-    /* This will only select the children div elements */
-    /* and give them some side padding */
-    &--gutters > div {
-        padding-right: 65px;
-    }
-
-    /* This works with the "overflow: hidden" proptery that is added to the wrapper class */
-    /* To remove the extra padding on the right side of the last column */
-    &--gutters {
-        margin-right: -65px;
     }
 }
