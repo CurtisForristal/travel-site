@@ -1,7 +1,7 @@
 /* Add top and botom padding (empty space) to go between page sections */
 
 .page-section {
-    padding: 1.2rem;
+    padding: 1.2rem 0;
 
     @mixin atMedium {
         padding: 4.5rem 0;

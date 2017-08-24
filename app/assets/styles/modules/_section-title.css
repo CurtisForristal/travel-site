@@ -1,0 +1,34 @@
+
+
+.section-title {
+    font-size: 2.55rem;
+    font-weight: 300;
+    text-align: center;
+    
+
+    @mixin atSmall {
+        font-size: 3.75rem;
+    }
+
+    strong {
+        font-weight: 500;
+    }
+
+
+    &__icon {
+        /* puts icon on its own line, and "Our Features" on a new line after */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0.6rem;
+
+
+        @mixin atSmall {
+            /* put icon and "Our Features" on the same line */
+            display: inline-block;
+            margin-right: 0.5rem;
+            margin-left: 0;
+            margin-bottom: 0;
+        }
+    }
+}
