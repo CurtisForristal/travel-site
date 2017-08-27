@@ -621,6 +621,36 @@ a {
         max-width: 976px;
     }
 
+.wrapper--no-padding-until-medium {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+/* If the screen is larger that 800px */
+
+@media (min-width: 800px) {
+
+.wrapper--no-padding-until-medium {
+            padding-left: 18px;
+            padding-right: 18px
+    }
+    }
+
+.wrapper--no-padding-until-large {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+/* If the screen is larger that 1200px */
+
+@media (min-width: 1010px) {
+
+.wrapper--no-padding-until-large {
+            padding-left: 18px;
+            padding-right: 18px
+    }
+    }
+
 /* Any wrapper that is nested inside another wrapper don't get the double padding applied */
 
 .wrapper .wrapper {
@@ -656,9 +686,49 @@ a {
 }
     }
 
+.page-section--no-b-padding-until-medium {
+        padding-bottom: 0;
+    }
+
+/* If the screen is larger that 800px */
+
+@media (min-width: 800px) {
+
+.page-section--no-b-padding-until-medium {
+            padding-bottom: 4.5rem
+    }
+    }
+
+.page-section--no-b-padding-until-large {
+        padding-bottom: 0;
+    }
+
+/* If the screen is larger that 1200px */
+
+@media (min-width: 1010px) {
+
+.page-section--no-b-padding-until-large {
+            padding-bottom: 4.5rem
+    }
+    }
+
 .page-section--blue {
         background-color: #2f5572;
         color: #FFF;
+    }
+
+.page-section--testimonials {
+        background-color: #e0e6ef;
+    }
+
+/* If the screen is larger that 1200px */
+
+@media (min-width: 1010px) {
+
+.page-section--testimonials {
+            background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+            background-size: cover
+    }
     }
 
 .headline {
@@ -719,13 +789,6 @@ a {
         margin-top: 0;
     }
 
-.row {
-
-    /* Have to "clear" the floats or else the parent row div doesn't know how tall it should be */
-    /* This will create some blank space after all of the content in the row div */
-    /* When floating divs in an empty row parent element */
-}
-
 /* This will create some blank space after all of the content in the row div */
 
 .row::after {
@@ -735,6 +798,12 @@ a {
     }
 
 /* You have to "clear" the floats or else the parent row div doesn't know how tall it should be */
+
+.row--t-padding {
+        padding-top: 80px;
+    }
+
+/* When floating divs in an empty row parent element */
 
 .row__b-margin-until-medium {
         margin-bottom: 1.0rem;
@@ -752,6 +821,12 @@ a {
         padding-right: 100px;
     }
 
+/* This will create some blank space after all of the content in the row div */
+
+.row--gutters-small > div {
+        padding-right: 45px;
+    }
+
 /* To remove the extra padding on the right side of the last column */
 
 .row--gutters {
@@ -759,6 +834,12 @@ a {
     }
 
 /* This works with the "overflow: hidden" proptery that is added to the wrapper class */
+
+.row--gutters-small {
+        margin-right: -45px;
+    }
+
+/* Have to "clear" the floats or else the parent row div doesn't know how tall it should be */
 
 .row--gutters-large {
         margin-right: -100px;
@@ -801,6 +882,81 @@ a {
         }
     }
 
+/* If the screen is larger that 1200px */
+
+@media (min-width: 1010px) {
+        
+        .row__b-margin-until-large {
+            margin-bottom: 0;
+        }
+        
+        
+        .row__large-4 {
+            float: left;
+            width: 33.33%
+        }
+
+
+        .row__large-4--larger {
+            width: 37%;
+        }
+
+
+        .row__large-6 {
+            float: left;
+            width: 50%;
+        }
+
+
+        .row__large-8 {
+            float: left;
+            width: 66.66%;
+        }
+
+
+        .row__large-8--smaller {
+            width: 63%;
+        }
+    }
+
+/* Begin Equal Height Rules */
+
+/* If the screen is larger that 800px */
+
+@media (min-width: 800px) {
+
+.row--equal-height-at-medium {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex
+    }
+    }
+
+.row--equal-height-at-medium > div {
+            float: none;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+/* If the screen is larger that 1200px */
+
+@media (min-width: 1010px) {
+
+.row--equal-height-at-large {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex
+    }
+    }
+
+.row--equal-height-at-large > div {
+            float: none;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
 .generic-content-container p {
         line-height: 1.65;
         margin: 0 0 1.8rem 0;
@@ -839,6 +995,10 @@ a {
         font-weight: 500;
     }
 
+.section-title--blue {
+        color: #2f5572;
+    }
+
 .section-title__icon {
         /* puts icon on its own line, and "Our Features" on a new line after */
         display: block;
@@ -856,7 +1016,9 @@ a {
             display: inline-block;
             margin-right: 0.5rem;
             margin-left: 0;
-            margin-bottom: 0
+            margin-bottom: 0;
+            position: relative;
+            top: 8px
     }
     }
 
@@ -906,4 +1068,51 @@ a {
             font-size: 1.875rem;
             margin-top: 1.0em
     }
+    }
+
+.testimonial {
+    background-color: rgba(255, 255, 255, .8);
+    padding: 0 18px 1px 18px;
+    margin-bottom: 98px;
+}
+
+/* If the screen is larger that 1200px */
+
+@media (min-width: 1010px) {
+
+.testimonial {
+        padding: 0 1.8125rem 1px 1.8125rem;
+        margin-bottom: 0
+}
+    }
+
+.testimonial--last {
+        margin-bottom: 0;
+    }
+
+.testimonial__photo {
+        border-radius: 80px;
+        overflow: hidden;
+        width: 160px;
+        height: 160px;
+        margin: 0 auto -80px auto;
+        position: relative;
+        top: -80px;
+        border: 6px solid rgba(255, 255, 255, .8);
+    }
+
+.testimonial__title {
+        color: #2f5572;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin: 0;
+    }
+
+.testimonial__subtitle {
+        color: #d59541;
+        text-align: center;
+        font-weight: 400;
+        font-size: 0.9375rem;
+        margin: 0.25rem 1.0rem;
     }

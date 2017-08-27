@@ -15,6 +15,11 @@
     }
 
 
+    &--blue {
+        color: $mainBlue;
+    }
+
+
     &__icon {
         /* puts icon on its own line, and "Our Features" on a new line after */
         display: block;
@@ -29,6 +34,8 @@
             margin-right: 0.5rem;
             margin-left: 0;
             margin-bottom: 0;
+            position: relative;
+            top: 8px;
         }
     }
 }
